@@ -1,0 +1,37 @@
+A#+title: Random Geekery Life
+#+hugo_custom_front_matter: :formatter "ox-hugo"
+#+hugo_base_dir: ../
+#+startup: logdone
+
+* Posts
+:properties:
+:hugo_section: posts
+:end:
+
+** 2022
+:properties:
+:export_hugo_section: posts/2022
+:end:
+*** 2022-05 May
+:properties:
+:export_hugo_section: posts/2022/05
+:end:
+**** 2022-05-02 Monday
+:properties:
+:export_hugo_section: posts/2022/05/02
+:end:
+***** DONE [2022-05-02 Mon 13:20]
+CLOSED: [2022-05-02 Mon 13:20]
+:properties:
+:export_file_name: 1320
+:end:
+:LOGBOOK:
+- State "DONE"       from              [2022-05-02 Mon 13:20]
+:END:
+Trying to use [[https://gohugo.io][Hugo]] and [[https://ox-hugo.scripter.co][ox-hugo]] to have sort of a [[https://en.wiktionary.org/wiki/tumblelog][tumblelog]] with [[https://orgmode.org][Org mode]].
+
+What's a tumblelog? Just kind of a stream-of-consciousness blog. Might have recurring topics. Might not. Posts might have titles. They might not. Might be short notes. Might be long essays.
+
+Why? Inspired by the [[https://rachel.live][Rachel Quickblogge]]. Course she did hers the smart and quick way, using WordPress. But I gotta be me, and [[https://www.oglaf.com/trapmaster/][overthinking]] it is what I do best.
+
+Looks nice, yes? Starting with the familiar [[https://themes.gohugo.io/themes/hyde/][Hyde]] theme. Going on vacation now, so it may take me a few days to turn this project into a proper mess.

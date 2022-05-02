@@ -1,0 +1,16 @@
+baseURL = 'https://randomgeekery.life'
+languageCode = 'en-us'
+theme = "hyde-ish"
+title = 'Random Geekery Life'
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[menus]
+main = [
+  {Name = "Random Geekery", URL = "https://randomgeekery.org" }
+]
+
+[params]
+description = 'A tumblelog by Brian Wisti'
+

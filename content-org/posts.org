@@ -44,3 +44,24 @@ CLOSED: [2022-05-02 Mon 14:28]
 - State "DONE"       from              [2022-05-02 Mon 14:28]
 :END:
 Gotta wait for nameserver stuff to propogate. Patience is not consistently one of my virtues.
+***** DONE [2022-05-02 Mon 14:56]                                 :emacs:
+CLOSED: [2022-05-02 Mon 15:00]
+:properties:
+:export_file_name: 1456.md
+:end:
+:LOGBOOK:
+- State "DONE"       from              [2022-05-02 Mon 15:00]
+:END:
+Note added with a capture template, though I still need to manually assemble a bit.
+
+#+begin_src elisp
+  (setq org-capture-templates
+        '(("t" "Tumblelog" entry
+           (file+olp+datetree bmw/tumble-log)
+           "* %U %?\n:properties:\n:export_file_name: nnn.md\n:end:\n")
+          ))
+#+end_src
+
+Less manual construction than a couple minutes ago!
+
+I'll have to learn some Elisp to make it work how it does in my head.

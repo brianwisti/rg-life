@@ -12,7 +12,10 @@ unsafe = true
 
 [menus]
 main = [
-  {Name = "Random Geekery", URL = "https://randomgeekery.org" }
+  {Name = "RSS", URL = "/index.xml"},
+  {Name = "Random Geekery", URL = "https://randomgeekery.org" },
+  {Name = "@brianwisti", URL = "https://twitter.com/brianwisti" },
+  {Name = "randomgeek@hackers.town", URL = "https://hackers.town/@randomgeek"}
 ]
 
 [params]

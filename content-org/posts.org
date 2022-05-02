@@ -35,3 +35,12 @@ What's a tumblelog? Just kind of a stream-of-consciousness blog. Might have recu
 Why? Inspired by the [[https://rachel.live][Rachel Quickblogge]]. Course she did hers the smart and quick way, using WordPress. But I gotta be me, and [[https://www.oglaf.com/trapmaster/][overthinking]] it is what I do best.
 
 Looks nice, yes? Starting with the familiar [[https://themes.gohugo.io/themes/hyde/][Hyde]] theme. Going on vacation now, so it may take me a few days to turn this project into a proper mess.
+***** DONE [2022-05-02 Mon 14:28]
+CLOSED: [2022-05-02 Mon 14:28]
+:properties:
+:export_file_name: 1428
+:end:
+:LOGBOOK:
+- State "DONE"       from              [2022-05-02 Mon 14:28]
+:END:
+Gotta wait for nameserver stuff to propogate. Patience is not consistently one of my virtues.

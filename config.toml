@@ -1,5 +1,5 @@
 # use netlify path
-baseURL = 'https://vermillion-palmier-f3b4c2.netlify.app'
+baseURL = 'https://vermillion-palmier-f3b4c2.netlify.app/'
 # until everything propogates
 # baseURL = 'https://randomgeekery.life'
 

@@ -48,6 +48,7 @@ Gotta wait for nameserver stuff to propogate. Patience is not consistently one o
 CLOSED: [2022-05-02 Mon 15:00]
 :properties:
 :export_file_name: 1456.md
+:ID:       7383F674-3075-48A2-8301-D3C655711C20
 :end:
 :LOGBOOK:
 - State "DONE"       from              [2022-05-02 Mon 15:00]
@@ -65,3 +66,18 @@ Note added with a capture template, though I still need to manually assemble a b
 Less manual construction than a couple minutes ago!
 
 I'll have to learn some Elisp to make it work how it does in my head.
+***** DONE [2022-05-02 Mon 15:26]
+CLOSED: [2022-05-02 Mon 15:31]
+:properties:
+:export_file_name: 1526.md
+:end:
+:LOGBOOK:
+- State "DONE"       from              [2022-05-02 Mon 15:31]
+:END:
+So what's the plan?
+
+- use Org mode for authoring and organizing on my side of things
+- take advantage of [[https://netlify.com][Netlify]] features where possible
+- loads of [[https://indieweb.org][IndieWeb]] of course
+
+ox-hugo and Hugo were the easiest to start with on this idea, but I may end up somewhere else. [[https://elderguide.com/tech/elderjs/][Elder.js]] and [[https://orga.js.org][Orga]] could lead me down another path, for example.

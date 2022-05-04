@@ -17,6 +17,7 @@ main = [
 description = 'A tumblelog by Brian Wisti'
 PlausibleDomain = "randomgeekery.life"
 Me = [
+  {Name = "Github", URL = "https://github.com/brianwisti" },
   { Name = "@randomgeek@hackers.town", URL = "https://hackers.town/@randomgeek" },
   {Name = "Random Geekery", URL = "https://randomgeekery.org" }
 ]

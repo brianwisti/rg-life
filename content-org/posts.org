@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       76FF95B7-7784-418B-9B46-5126F6B69BA2
+:END:
 A#+title: Random Geekery Life
 #+hugo_custom_front_matter: :formatter "ox-hugo"
 #+hugo_base_dir: ../
@@ -81,3 +84,24 @@ So what's the plan?
 - loads of [[https://indieweb.org][IndieWeb]] of course
 
 ox-hugo and Hugo were the easiest to start with on this idea, but I may end up somewhere else. [[https://elderguide.com/tech/elderjs/][Elder.js]] and [[https://orga.js.org][Orga]] could lead me down another path, for example.
+
+**** 2022-05-03 Tuesday
+:properties:
+:export_hugo_section: posts/2022/05/03
+:end:
+***** DONE [2022-05-03 Tue 19:28]                        :vacation:vegas:
+CLOSED: [2022-05-03 Tue 19:40]
+:properties:
+:export_file_name: 1928.md
+:ID:       DBFE880B-471E-4548-9E6D-3E0E4564CC03
+:end:
+:LOGBOOK:
+- State "DONE"       from              [2022-05-03 Tue 19:40]
+:END:
+
+Oh hey DNS has propagated. So this thing has a proper URL now: https://randomgeekery.life.
+
+Meanwhile, getting updates that our critters are being properly cared for while we're on vacation, so I can do very important things like take pictures of shoes.
+
+#+caption: A shoe in Vegas
+[[/img/a-shoe-in-vegas.jpeg][file:/img/a-shoe-in-vegas.jpeg]]

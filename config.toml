@@ -11,8 +11,7 @@ unsafe = true
 main = [
   {Name = "RSS", URL = "/index.xml"},
   {Name = "Random Geekery", URL = "https://randomgeekery.org" },
-  {Name = "@brianwisti", URL = "https://twitter.com/brianwisti" },
-  {Name = "randomgeek@hackers.town", URL = "https://hackers.town/@randomgeek"}
+  {Name = "Source Repo", URL = "https://github.com/brianwisti/rg-life"}
 ]
 
 [params]

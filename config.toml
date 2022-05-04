@@ -17,4 +17,4 @@ main = [
 
 [params]
 description = 'A tumblelog by Brian Wisti'
-
+PlausibleDomain = "randomgeekery.life"

@@ -6,7 +6,9 @@
     </main>
 
     {{ if not .Site.IsServer }}
-      {{ template "_internal/google_analytics.html" . }}
+      {{- with .Site.Params.PlausibleDomain -}}
+        <script defer data-domain="{{ . }}" src="https://plausible.io/js/script.js"></script>
+      {{- end }}
     {{ end }}
   </body>
 </html>

@@ -105,3 +105,19 @@ Meanwhile, getting updates that our critters are being properly cared for while 
 
 #+caption: A shoe in Vegas
 [[/img/a-shoe-in-vegas.jpeg][file:/img/a-shoe-in-vegas.jpeg]]
+
+*** 2022-05-04 Wednesday
+:properties:
+:export_hugo_section: posts/2022/05/04
+:end:
+**** DONE [2022-05-04 Wed 08:45] 
+CLOSED: [2022-05-04 Wed 08:48]
+:properties:
+:export_file_name: 0845.md
+:end:
+:LOGBOOK:
+- State "DONE"       from              [2022-05-04 Wed 08:48]
+:END:
+Sure would love to figure out [[https://beorg.app][beorg]] configuration enough to make it part of my posting workflow here.
+
+Well I sure won't be learning all of it during this trip. /Maybe/ after I get home --- though the priority drops significantly when I'm in front of my home system.

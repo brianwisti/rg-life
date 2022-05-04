@@ -13,6 +13,10 @@
         {{ range .Site.Menus.main -}}
           <li><a href="{{.URL}}"> {{ .Name }} </a></li>
         {{- end }}
+        <li>Links to Me</li>
+        {{- range .Site.Params.Me }}
+          <li><a href="{{.URL}}" rel="me"> {{ .Name }} </a></li>
+        {{- end }}
       </ul>
     </nav>
 

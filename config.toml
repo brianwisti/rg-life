@@ -10,10 +10,14 @@ unsafe = true
 [menus]
 main = [
   {Name = "RSS", URL = "/index.xml"},
-  {Name = "Random Geekery", URL = "https://randomgeekery.org" },
   {Name = "Source Repo", URL = "https://github.com/brianwisti/rg-life"}
 ]
 
 [params]
 description = 'A tumblelog by Brian Wisti'
 PlausibleDomain = "randomgeekery.life"
+Me = [
+  { Name = "@brianwisti", URL = "https://twitter.com/brianwisti" },
+  { Name = "@randomgeek@hackers.town", URL = "https://hackers.town/@randomgeek" },
+  {Name = "Random Geekery", URL = "https://randomgeekery.org" }
+]

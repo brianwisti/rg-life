@@ -2,12 +2,9 @@
   <nav class="breadcrumb">
     <a href="/">Home</a>
     / <a href="/posts/">Posts</a>
-    / {{ .Title }}
+    / <span class="p-name">{{ .Title }}</span>
   </nav>
   <div class="post h-entry">
-    <header>
-      <h1 class="p-name">{{ .Title }}</h1>
-    </header>
     <section class="e-content">
       {{ .Content }}
     </section>

@@ -42,7 +42,13 @@ $breakpoints: (
   font-style: italic;
 }
 
+.p-name {
+  font-weight: bold;
+}
+
 .h-entry {
+  margin: 1rem;
+
   header {
     font-weight: bold;
   }

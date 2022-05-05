@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700");
 
+$width-sm: 30em;
+$width-md: 48em;
+$width-lg: 58em;
+$width-xl: 64em;
+
 @import 'print';
 @import 'poole';
 @import 'syntax';
@@ -9,4 +14,5 @@
   --font-size-base: 16px;
   --font-family-prose: "PT Sans", Helvetica, Arial, sans-serif;
   --font-family-title: "Abril Fatface", serif;
+  --font-family-code: Menlo, Monaco, "Courier New", monospace;
 }

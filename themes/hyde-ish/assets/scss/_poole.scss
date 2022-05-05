@@ -105,7 +105,7 @@ abbr {
 /* Code */
 code,
 pre {
-  font-family: Menlo, Monaco, "Courier New", monospace;
+  font-family: var(--font-family-code);
 }
 
 code {
@@ -157,7 +157,7 @@ blockquote {
     margin-bottom: 0;
   }
 
-  @media (min-width: 30em) {
+  @media (min-width: $width-sm) {
     padding-right: 5rem;
     padding-left: 1.25rem;
   }
@@ -333,11 +333,11 @@ tbody tr:nth-child(odd) th {
   overflow: hidden; /* clearfix */
   margin-left: -1rem;
   margin-right: -1rem;
-  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-family: var(--font-family-prose);
   color: #ccc;
   text-align: center;
 
-  @media (min-width: 30em) {
+  @media (min-width: $width-sm) {
     margin: 3rem 0;
   }
 }
@@ -352,7 +352,7 @@ tbody tr:nth-child(odd) th {
     margin-bottom: -1px;
   }
 
-  @media (min-width: 30em) {
+  @media (min-width: $width-sm) {
     float: left;
     width: 50%;
 

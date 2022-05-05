@@ -5,6 +5,25 @@ $width-md: 48em;
 $width-lg: 58em;
 $width-xl: 64em;
 
+// via https://css-tricks.com/snippets/sass/mixin-manage-breakpoints/
+$breakpoints: (
+  'sm': 30em,
+  'md': 48em,
+  'lg': 58em,
+  'xl': 64em
+) !default;
+
+@mixin from-width($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+  @else {
+    @warn("No `#{$breakpoint}` value.");
+  }
+}
+
 @import 'print';
 @import 'poole';
 @import 'syntax';

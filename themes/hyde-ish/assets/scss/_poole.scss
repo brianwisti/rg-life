@@ -157,7 +157,7 @@ blockquote {
     margin-bottom: 0;
   }
 
-  @media (min-width: $width-sm) {
+  @include from-width("sm") {
     padding-right: 5rem;
     padding-left: 1.25rem;
   }
@@ -352,7 +352,7 @@ tbody tr:nth-child(odd) th {
     margin-bottom: -1px;
   }
 
-  @media (min-width: $width-sm) {
+  @include from-width("sm") {
     float: left;
     width: 50%;
 

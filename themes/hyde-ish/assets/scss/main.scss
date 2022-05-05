@@ -4,3 +4,9 @@
 @import 'poole';
 @import 'syntax';
 @import 'hyde';
+
+:root {
+  --font-size-base: 16px;
+  --font-family-prose: "PT Sans", Helvetica, Arial, sans-serif;
+  --font-family-title: "Abril Fatface", serif;
+}

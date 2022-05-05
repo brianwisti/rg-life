@@ -106,11 +106,11 @@ Meanwhile, getting updates that our critters are being properly cared for while 
 #+caption: A shoe in Vegas
 [[/img/a-shoe-in-vegas.jpeg][file:/img/a-shoe-in-vegas.jpeg]]
 
-*** 2022-05-04 Wednesday
+**** 2022-05-04 Wednesday
 :properties:
 :export_hugo_section: posts/2022/05/04
 :end:
-**** DONE [2022-05-04 Wed 08:45] 
+***** DONE [2022-05-04 Wed 08:45] 
 CLOSED: [2022-05-04 Wed 08:48]
 :properties:
 :export_file_name: 0845.md
@@ -121,3 +121,32 @@ CLOSED: [2022-05-04 Wed 08:48]
 Sure would love to figure out [[https://beorg.app][beorg]] configuration enough to make it part of my posting workflow here.
 
 Well I sure won't be learning all of it during this trip. /Maybe/ after I get home --- though the priority drops significantly when I'm in front of my home system.
+**** 2022-05-05 Thursday
+:properties:
+:export_hugo_section: posts/2022/05/05
+:end:
+
+***** DONE [2022-05-05 Thu 11:30] 
+CLOSED: [2022-05-05 Thu 11:30]
+:properties:
+:export_file_name: 1130.md
+:ID:       6C1CB7A7-2E7B-44E2-90B8-0687F79BC354
+:end:
+:LOGBOOK:
+- State "DONE"       from              [2022-05-05 Thu 11:44]
+:END:
+
+Eight hours of sleep. Such a miracle! Course I think I mentioned we're staying right in the [[https://vegasexperience.com][Fremont Experience]], so that required waiting until around 2am to fall asleep.
+
+I'm having some fun despite myself, but I am also very much looking forward to getting home.
+***** DONE [2022-05-05 Thu 11:46]                         :reading:emacs:
+CLOSED: [2022-05-05 Thu 11:50]
+:properties:
+:export_file_name: 1150.md
+:end:
+:LOGBOOK:
+- State "DONE"       from              [2022-05-05 Thu 11:50]
+:END:
+My only /intentional/ use of Emacs at the moment is assorted [[https://orgmode.org][Org mode]] tools, but even at that level it'd sure help to get more comfortable with it.
+
+Got myself a copy of [[https://masteringemacs.org][Mastering Emacs]] to fill in a few of the gaps between =C-h t= and wherever I've been at for the last few years.

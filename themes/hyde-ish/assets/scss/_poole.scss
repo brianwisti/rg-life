@@ -1,13 +1,6 @@
 /*
- *                        ___
- *                       /\_ \
- *  _____     ___     ___\//\ \      __
- * /\ '__`\  / __`\  / __`\\ \ \   /'__`\
- * \ \ \_\ \/\ \_\ \/\ \_\ \\_\ \_/\  __/
- *  \ \ ,__/\ \____/\ \____//\____\ \____\
- *   \ \ \/  \/___/  \/___/ \/____/\/____/
- *    \ \_\
- *     \/_/
+ *
+ * Uses CSS and design elements from @mdo's poole design:
  *
  * Designed, built, and released under MIT license by @mdo. Learn more at
  * https://github.com/poole/poole.
@@ -51,9 +44,8 @@ html {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
-}
-@media (min-width: 38em) {
-  html {
+
+  @media (min-width: 38em) {
     font-size: 20px;
   }
 }
@@ -66,15 +58,14 @@ body {
           text-size-adjust: 100%;
 }
 
-/* No `:visited` state is required by default (browsers will use `a`) */
 a {
   color: #227bb9;
   text-decoration: none;
-}
-/* `:focus` is linked to `:hover` for basic accessibility */
-a:hover,
-a:focus {
-  text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
 }
 
 /* Headings */
@@ -111,7 +102,6 @@ strong {
   color: #303030;
 }
 
-
 /* Lists */
 ul, ol, dl {
   margin-top: 0;
@@ -139,17 +129,20 @@ abbr {
   font-weight: bold;
   color: #555;
   text-transform: uppercase;
+
+  &[title] {
+    cursor: help;
+    border-bottom: 1px dotted #e5e5e5;
+  }
 }
-abbr[title] {
-  cursor: help;
-  border-bottom: 1px dotted #e5e5e5;
-}
+
 
 /* Code */
 code,
 pre {
   font-family: Menlo, Monaco, "Courier New", monospace;
 }
+
 code {
   padding: .25em .5em;
   font-size: 85%;
@@ -157,6 +150,7 @@ code {
   background-color: #f9f9f9;
   border-radius: 3px;
 }
+
 pre {
   display: block;
   margin-top: 0;
@@ -169,19 +163,22 @@ pre {
   word-break: break-all;
   word-wrap: break-word;
   background-color: #f9f9f9;
+
+  code {
+    padding: 0;
+    font-size: 100%;
+    color: inherit;
+    background-color: transparent;
+  }
 }
-pre code {
-  padding: 0;
-  font-size: 100%;
-  color: inherit;
-  background-color: transparent;
-}
+
 .highlight {
   margin-bottom: 1rem;
   border-radius: 4px;
-}
-.highlight pre {
-  margin-bottom: 0;
+
+  pre {
+    margin-bottom: 0;
+  }
 }
 
 /* Quotes */
@@ -190,12 +187,12 @@ blockquote {
   margin: .8rem 0;
   color: #7a7a7a;
   border-left: .25rem solid #e5e5e5;
-}
-blockquote p:last-child {
-  margin-bottom: 0;
-}
-@media (min-width: 30em) {
-  blockquote {
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: 30em) {
     padding-right: 5rem;
     padding-left: 1.25rem;
   }
@@ -279,21 +276,23 @@ tbody tr:nth-child(odd) th {
   padding-bottom: 1rem;
   margin-bottom: 3rem;
 }
+
 .masthead-title {
   margin-top: 0;
   margin-bottom: 0;
   color: #505050;
-}
-.masthead-title a {
-  color: #505050;
-}
-.masthead-title small {
-  font-size: 75%;
-  font-weight: 400;
-  color: #c0c0c0;
-  letter-spacing: 0;
-}
 
+  a {
+    color: #505050;
+  }
+
+  small {
+    font-size: 75%;
+    font-weight: 400;
+    color: #c0c0c0;
+    letter-spacing: 0;
+  }
+}
 
 /*
  * Posts and pages
@@ -332,25 +331,31 @@ tbody tr:nth-child(odd) th {
   padding-bottom: 2rem;
   border-top: 1px solid #eee;
 }
+
 .related-posts {
   padding-left: 0;
   list-style: none;
-}
-.related-posts h3 {
-  margin-top: 0;
-}
-.related-posts li small {
-  font-size: 75%;
-  color: #999;
-}
-.related-posts li a:hover {
-  color: #227bb9;
-  text-decoration: none;
-}
-.related-posts li a:hover small {
-  color: inherit;
-}
 
+  h3 {
+    margin-top: 0;
+  }
+
+  li {
+    small {
+      font-size: 75%;
+      color: #999;
+    }
+
+    a:hover {
+      color: #227bb9;
+      text-decoration: none;
+
+      small {
+        color: inherit;
+      }
+    }
+  }
+}
 
 /*
  * Pagination
@@ -366,6 +371,10 @@ tbody tr:nth-child(odd) th {
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
   color: #ccc;
   text-align: center;
+
+  @media (min-width: 30em) {
+    margin: 3rem 0;
+  }
 }
 
 /* Pagination items can be `span`s or `a`s */
@@ -373,32 +382,30 @@ tbody tr:nth-child(odd) th {
   display: block;
   padding: 1rem;
   border: 1px solid #eee;
-}
-.pagination-item:first-child {
-  margin-bottom: -1px;
+
+  &:first-child {
+    margin-bottom: -1px;
+  }
+
+  @media (min-width: 30em) {
+    float: left;
+    width: 50%;
+
+    &:first-child {
+      margin-bottom: 0;
+      border-top-left-radius:    4px;
+      border-bottom-left-radius: 4px;
+    }
+
+    &:last-child {
+      margin-left: -1px;
+      border-top-right-radius:    4px;
+      border-bottom-right-radius: 4px;
+    }
+  }
 }
 
 /* Only provide a hover state for linked pagination items */
 a.pagination-item:hover {
   background-color: #f5f5f5;
-}
-
-@media (min-width: 30em) {
-  .pagination {
-    margin: 3rem 0;
-  }
-  .pagination-item {
-    float: left;
-    width: 50%;
-  }
-  .pagination-item:first-child {
-    margin-bottom: 0;
-    border-top-left-radius:    4px;
-    border-bottom-left-radius: 4px;
-  }
-  .pagination-item:last-child {
-    margin-left: -1px;
-    border-top-right-radius:    4px;
-    border-bottom-right-radius: 4px;
-  }
 }

@@ -143,6 +143,7 @@ I'm having some fun despite myself, but I am also very much looking forward to g
 CLOSED: [2022-05-05 Thu 11:50]
 :properties:
 :export_file_name: 1150.md
+:ID:       D7016976-BEC8-4EE5-8ED5-09303466CC40
 :end:
 :LOGBOOK:
 - State "DONE"       from              [2022-05-05 Thu 11:50]
@@ -150,3 +151,12 @@ CLOSED: [2022-05-05 Thu 11:50]
 My only /intentional/ use of Emacs at the moment is assorted [[https://orgmode.org][Org mode]] tools, but even at that level it'd sure help to get more comfortable with it.
 
 Got myself a copy of [[https://masteringemacs.org][Mastering Emacs]] to fill in a few of the gaps between =C-h t= and wherever I've been at for the last few years.
+***** DONE [2022-05-05 Thu 14:26] 
+CLOSED: [2022-05-05 Thu 14:27]
+:properties:
+:export_file_name: 1426.md
+:end:
+:LOGBOOK:
+- State "DONE"       from              [2022-05-05 Thu 14:27]
+:END:
+If I'm using this is a micro-blog type thing, I need to think in single paragraphs more. Anyhow, we needed to decompress so I spent some time puttering on layout here.

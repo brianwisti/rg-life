@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700");
 
+:root {
+  --font-size-base: 16px;
+  --font-family-prose: "PT Sans", Helvetica, Arial, sans-serif;
+  --font-family-title: "Abril Fatface", serif;
+  --font-family-code: Menlo, Monaco, "Courier New", monospace;
+}
+
 $width-sm: 30em;
 $width-md: 48em;
 $width-lg: 58em;
@@ -29,9 +36,19 @@ $breakpoints: (
 @import 'syntax';
 @import 'hyde';
 
-:root {
-  --font-size-base: 16px;
-  --font-family-prose: "PT Sans", Helvetica, Arial, sans-serif;
-  --font-family-title: "Abril Fatface", serif;
-  --font-family-code: Menlo, Monaco, "Courier New", monospace;
+// Hyde customizations to eventually refactor as I organize the design better
+
+.read-more-link {
+  font-style: italic;
+}
+
+.h-entry {
+  header {
+    font-weight: bold;
+  }
+
+  footer {
+    font-size: smaller;
+    text-align: right;
+  }
 }

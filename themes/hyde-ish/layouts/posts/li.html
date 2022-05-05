@@ -1,0 +1,13 @@
+<section class="h-entry post summary">
+  <header>
+    <a href="{{ .Permalink }}" class="p-name u-url">{{ .Title }}</a>
+  </header>
+  {{- $paragraphs := split .Content "\n" -}}
+  {{ range first 1 $paragraphs }}{{ . | safeHTML }}{{ end }}
+  {{ if gt (len $paragraphs) 2 }}
+    <div class="read-more-link">
+      <a href="{{ .RelPermalink }}">Read More…</a>
+    </div>
+  {{ end }}
+  {{ partial "entry-footer" . }}
+</section>

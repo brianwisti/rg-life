@@ -1,17 +1,14 @@
 {{ define "main" -}}
+  <nav class="breadcrumb">
+    <a href="/">Home</a>
+    / {{ .Title }}
+  </nav>
   {{- $paginator := .Paginate .Data.Pages -}}
   {{ template "_internal/pagination.html" . }}
-  <ul class="posts h-feed">
-    {{ range $paginator.Pages -}}
-      <li>
-        <span class="h-entry">
-          <a href="{{ .Permalink }}" class="p-name u-url">{{ .Title }}</a>
-          <time
-            class="pull-right post-list dt-published"
-            datetime="{{ .Date.Format "2006-01-02T15:04:05Z0700" }}">{{ .Date.Format "Mon, Jan 2, 2006" }}</time>
-          by <a href="https://randomgeekery.org" class="h-card p-author">Brian Wisti</a>
-        </span>
-      </li>
-    {{- end }}
-  </ul>
+  <section class="posts h-feed">
+    <header>
+      <h1>{{ .Title }}</h1>
+    </header>
+    {{ range $paginator.Pages -}} {{ .Render "li" }} {{- end }}
+  </section>
 {{- end }}

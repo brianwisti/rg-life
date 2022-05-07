@@ -160,3 +160,17 @@ CLOSED: [2022-05-05 Thu 14:27]
 - State "DONE"       from              [2022-05-05 Thu 14:27]
 :END:
 If I'm using this is a micro-blog type thing, I need to think in single paragraphs more. Anyhow, we needed to decompress so I spent some time puttering on layout here.
+
+*** 2022-05-06 Friday
+:properties:
+:export_hugo_section: posts/2022/05/06
+:end:
+**** DONE [2022-05-06 Fri 23:56] 
+CLOSED: [2022-05-06 Fri 23:56]
+:properties:
+:export_file_name: 2356.md
+:end:
+:LOGBOOK:
+- State "DONE"       from              [2022-05-06 Fri 23:56]
+:END:
+We're home and freshly scrubbed. The critters missed us. All is well.

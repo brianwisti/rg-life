@@ -1,7 +1,8 @@
 :PROPERTIES:
 :ID:       76FF95B7-7784-418B-9B46-5126F6B69BA2
 :END:
-A#+title: Random Geekery Life
+#+title: Random Geekery Life
+#+author: Brian Wisti
 #+hugo_custom_front_matter: :formatter "ox-hugo"
 #+hugo_base_dir: ../
 #+startup: logdone
@@ -36,6 +37,15 @@ Trying to finish at least one book before I give in to the temptation to buy [[h
 Also it's after 1am here and I should go to bed. Just wanted to read that tab before I closed it, and now I'm all "ooh that sounds good."
 
 anyways goodnight
+***** DONE [2022-05-08 Sun 13:37]
+CLOSED: [2022-05-08 Sun 13:42]
+:properties:
+:export_file_name: 1652042239.md
+:end:
+:LOGBOOK:
+- State "DONE"       from "NOW"        [2022-05-08 Sun 13:42]
+:END:
+Tuning my Org tumblelogging setup for /this/ site but of course since I'm using a [[https://zzamboni.org/book/lit-config/][Literate Config]] approach and generally [[https://randomgeekery.org/config/emacs][publishing]] that stuff once updated I am of course reworking my =config.org= because I wasn't happy with how a code block was being exported.
 **** 2022-05-06 Friday
 :properties:
 :export_hugo_section: posts/2022/05/06

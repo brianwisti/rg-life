@@ -11,8 +11,12 @@
     {{ partial "entry-footer" . }}
   </div>
 
-  {{ if .Site.DisqusShortname -}}
-    <h2>Comments</h2>
-    {{ template "_internal/disqus.html" . }}
-  {{- end }}
+  <script src="https://utteranc.es/client.js"
+        repo="brianwisti/rg-life"
+        issue-term="url"
+        label="comment"
+        theme="boxy-light"
+        crossorigin="anonymous"
+        async>
+  </script>
 {{- end }}

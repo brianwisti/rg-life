@@ -37,7 +37,7 @@ Trying to finish at least one book before I give in to the temptation to buy [[h
 Also it's after 1am here and I should go to bed. Just wanted to read that tab before I closed it, and now I'm all "ooh that sounds good."
 
 anyways goodnight
-***** DONE [2022-05-08 Sun 13:37]
+***** DONE [2022-05-08 Sun 13:37]                              :Workflow:
 CLOSED: [2022-05-08 Sun 13:42]
 :properties:
 :export_file_name: 1652042239.md
@@ -59,7 +59,7 @@ Comments? Maybe? Let's find out.
 :properties:
 :export_hugo_section: posts/2022/05/06
 :end:
-***** DONE [2022-05-06 Fri 23:56] 
+***** DONE [2022-05-06 Fri 23:56]                                   :Now:
 CLOSED: [2022-05-06 Fri 23:56]
 :properties:
 :export_file_name: 2356.md
@@ -73,7 +73,7 @@ We're home and freshly scrubbed. The critters missed us. All is well.
 :export_hugo_section: posts/2022/05/05
 :end:
 
-***** DONE [2022-05-05 Thu 11:30] 
+***** DONE [2022-05-05 Thu 11:30]                    :Now:Vegas:Vacation:
 CLOSED: [2022-05-05 Thu 11:30]
 :properties:
 :export_file_name: 1130.md
@@ -112,7 +112,7 @@ If I'm using this is a micro-blog type thing, I need to think in single paragrap
 :properties:
 :export_hugo_section: posts/2022/05/04
 :end:
-***** DONE [2022-05-04 Wed 08:45] 
+***** DONE [2022-05-04 Wed 08:45]                              :Workflow:
 CLOSED: [2022-05-04 Wed 08:48]
 :properties:
 :export_file_name: 0845.md
@@ -127,7 +127,7 @@ Well I sure won't be learning all of it during this trip. /Maybe/ after I get ho
 :properties:
 :export_hugo_section: posts/2022/05/03
 :end:
-***** DONE [2022-05-03 Tue 19:28]                        :vacation:vegas:
+***** DONE [2022-05-03 Tue 19:28]                    :Vacation:Vegas:Now:
 CLOSED: [2022-05-03 Tue 19:40]
 :properties:
 :export_file_name: 1928.md
@@ -148,7 +148,7 @@ Meanwhile, getting updates that our critters are being properly cared for while 
 :properties:
 :export_hugo_section: posts/2022/05/02
 :end:
-***** DONE [2022-05-02 Mon 13:20]
+***** DONE [2022-05-02 Mon 13:20]                          :Now:Workflow:
 CLOSED: [2022-05-02 Mon 13:20]
 :properties:
 :export_file_name: 1320
@@ -210,3 +210,26 @@ So what's the plan?
 
 ox-hugo and Hugo were the easiest to start with on this idea, but I may end up somewhere else. [[https://elderguide.com/tech/elderjs/][Elder.js]] and [[https://orga.js.org][Orga]] could lead me down another path, for example.
 
+**** 2022-05-10 Tuesday
+***** DONE [2022-05-10 Tue 05:49]                                   :Now:
+CLOSED: [2022-05-10 Tue 05:50]
+:properties:
+:export_file_name: 1652186940.md
+:end:
+:LOGBOOK:
+- State "DONE"       from "NOW"        [2022-05-10 Tue 05:50]
+:END:
+Been sick the last couple days. Unsurprising after a week in Vegas. Modest fever confirmed, so it's not just me being wimpy. At least it's not COVID, according to home swab test.
+***** DONE [2022-05-10 Tue 05:51]                                 :Emacs:
+CLOSED: [2022-05-10 Tue 05:56]
+:properties:
+:export_file_name: 1652187112.md
+:end:
+:LOGBOOK:
+- State "DONE"       from "NOW"        [2022-05-10 Tue 05:56]
+:END:
+Oh, and I'm working up yet another Emacs config reset, to simplify the learning process while reading [[https://www.masteringemacs.org][Mastering Emacs]]. Using [[https://git.sr.ht/~technomancy/better-defaults][better-defaults]] as the core.
+
+#+hugo: more
+
+Much more modest than my [[https://randomgeekery.org/config/emacs/nano/][nano-based]] config. For now, at least. I'll add it to my config pages eventually. First I need to catch up with work stuff.

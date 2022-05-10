@@ -36,6 +36,12 @@ $breakpoints: (
 @import 'syntax';
 @import 'hyde';
 
+// Global styles
+
+footer {
+  font-size: smaller;
+}
+
 // Hyde customizations to eventually refactor as I organize the design better
 
 .read-more-link {
@@ -54,7 +60,37 @@ $breakpoints: (
   }
 
   footer {
-    font-size: smaller;
     text-align: right;
+    margin-top: -.5rem;
+    margin-bottom: 1rem;
+    color: #757575;
+
+    .taxonomy {
+      .p-category {
+        padding: 0 .25rem;
+      }
+    }
+  }
+}
+
+ul {
+  &.pagination {
+    list-style: none;
+
+    li {
+      display: inline-block;
+
+      &.active {
+        a.page-link {
+          font-weight: bold;
+        }
+      }
+
+      &.disabled {
+        a.page-link {
+          color: rgba(125, 125, 125, .5);
+        }
+      }
+    }
   }
 }

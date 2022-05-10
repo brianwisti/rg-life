@@ -1,0 +1,15 @@
+{{ define "main" -}}
+  <nav class="breadcrumb">
+    <a href="/">Home</a>
+    / <a href="/tags">Tags</a>
+    / {{ .Title }}
+  </nav>
+  {{- $paginator := .Paginate .Data.Pages -}}
+  {{ template "_internal/pagination.html" . }}
+  <section class="posts h-feed">
+    <header>
+      <h1>{{ .Title }}</h1>
+    </header>
+    {{ range $paginator.Pages -}} {{ .Render "li" }} {{- end }}
+  </section>
+{{- end }}

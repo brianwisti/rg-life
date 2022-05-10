@@ -20,6 +20,12 @@
       </ul>
     </nav>
 
-    <p>{{ with .Site.Params.copyright }}{{.}}{{ else }}&copy; {{ now.Format "2006"}}. All rights reserved. {{end}}</p>
+    <footer>
+      <p>{{ with .Site.Params.copyright }}{{.}}{{ else }}&copy; {{ now.Format "2006"}}. All rights reserved. {{end}}</p>
+      <p>
+        Built with <a href="https://gohugo.io">Hugo</a>
+        and <a href="https://ox-hugo.scripter.co">ox-hugo</a>.
+      </p>
+    </footer>
   </div>
 </aside>

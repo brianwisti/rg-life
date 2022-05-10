@@ -21,3 +21,6 @@ Me = [
   { Name = "@randomgeek@hackers.town", URL = "https://hackers.town/@randomgeek" },
   {Name = "Random Geekery", URL = "https://randomgeekery.org" }
 ]
+
+[taxonomies]
+tag = "tags"

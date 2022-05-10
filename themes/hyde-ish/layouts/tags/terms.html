@@ -1,0 +1,16 @@
+{{ define "main" -}}
+  <nav class="breadcrumb">
+    <a href="/">Home</a>
+    / {{ .Title }}
+  </nav>
+  <section class="tags h-feed">
+    <header>
+      <h1>{{ .Title }}</h1>
+    </header>
+    <ul>
+      {{ range .Site.Taxonomies.tags }}
+        <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a></li>
+      {{ end }}
+    </ul>
+  </section>
+{{- end }}

@@ -233,3 +233,18 @@ Oh, and I'm working up yet another Emacs config reset, to simplify the learning 
 #+hugo: more
 
 Much more modest than my [[https://randomgeekery.org/config/emacs/nano/][nano-based]] config. For now, at least. I'll add it to my config pages eventually. First I need to catch up with work stuff.
+
+**** 2022-05-11 Wednesday
+***** DONE [2022-05-11 Wed 07:19]                        :OrgMode:Neovim:
+CLOSED: [2022-05-11 Wed 07:30]
+:properties:
+:export_file_name: 1652278757.md
+:end:
+:LOGBOOK:
+- State "DONE"       from "NOW"        [2022-05-11 Wed 07:30]
+:END:
+Probably something to do with a quarter century of muscle memory and deep embedding of a particular tool's quirks, but I'm having trouble sticking to Emacs over (neo)vim even for small stuff like this tumblelog.
+
+Looking at [[https://nvim-orgmode.github.io][nvim-orgmode]] and even [[https://github.com/nvim-neorg/neorg][Neorg]] --- though Neorg's [[https://github.com/nvim-neorg/neorg/blob/main/docs/NFF-0.1-spec.md#detached-modifiers-and-their-functions][spec]] limit of six levels of header really chafes at my heavily outliner-oriented style. If I accept arbitrary constraints like that, then I may as well use Markdown or Asciidoctor. At least those have familiar syntax.
+
+For today? Emacs may not be comfortable, but it's the native home for Org files and that'll do.

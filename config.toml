@@ -13,14 +13,18 @@ main = [
   {Name = "Source Repo", URL = "https://github.com/brianwisti/rg-life"}
 ]
 
-[params]
-description = 'A tumblelog by Brian Wisti'
+[Params]
+Description = "Brian Wisti's Tumblelog"
 PlausibleDomain = "randomgeekery.life"
 Me = [
-  {Name = "Github", URL = "https://github.com/brianwisti" },
-  { Name = "@randomgeek@hackers.town", URL = "https://hackers.town/@randomgeek" },
   {Name = "Random Geekery", URL = "https://randomgeekery.org" }
 ]
+
+[Params.Author]
+Email = "brianwisti@pobox.com"
+Name = "Brian Wisti"
+Twitter = "brianwisti"
+WebMentions = "randomgeekery.org"
 
 [taxonomies]
 tag = "tags"

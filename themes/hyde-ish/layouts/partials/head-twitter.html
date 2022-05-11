@@ -1,0 +1,9 @@
+<meta name="twitter:title" content="{{ .Title }}">
+{{ with .Site.Params.Author.Twitter -}}
+  <meta name="twitter:site" content="@{{ . }}">
+{{- end }}
+{{ with .Description -}}
+  <meta name="twitter:description" content="{{ . }}">
+{{ else }}
+  <meta name="twitter:description" content="{{ .Summary }}">
+{{- end }}

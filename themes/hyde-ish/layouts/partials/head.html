@@ -7,13 +7,13 @@
 
   <!-- Enable responsiveness on mobile devices-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   {{ if .IsHome -}}
-  <title>{{ .Site.Title }}</title>
+    <title>{{ .Site.Title }}</title>
   {{- else -}}
-  <title>{{ .Title }} &middot; {{ .Site.Title }}</title>
+    <title>{{ .Title }} &middot; {{ .Site.Title }}</title>
   {{- end }}
-  <meta name="description" content="{{if .IsHome}}{{ $.Site.Params.description }}{{else}}{{.Description}}{{end}}" />
+  <meta name="description"
+    content="{{if .IsHome}}{{ $.Site.Params.description }}{{else}}{{.Description}}{{end}}" />
 
   <!-- CSS -->
   {{ $style := resources.Get "scss/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint -}}
@@ -27,6 +27,11 @@
   {{ range .AlternativeOutputFormats -}}
     {{ printf `<link href="%s" rel="%s" type="%s" title="%s" />` .Permalink .Rel .MediaType.Type $.Site.Title | safeHTML }}
   {{ end -}}
+
+  <!-- social meta -->
+  {{ partial "head-indieweb" . }}
+  {{ partial "head-twitter" . }}
+  {{ partial "head-opengraph" . }}
 
   {{ partial "hook_head_end.html" . }}
 </head>

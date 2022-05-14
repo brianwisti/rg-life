@@ -298,3 +298,14 @@ CLOSED: [2022-05-12 Thu 23:04]
 Promised I'd go to bed before 11pm. Oops. Okay but just getting this link to [[https://github.com/ananthakumaran/tide][Tide]] --- /TypeScript Interactive Development Environment/ for Emacs --- before I go brush my teeth.
 
 Also? I need to fiddle with my capture template logic for these notes, so it exports the subtree when I file from wherever.
+
+**** 2022-05-14 Saturday
+***** DONE [2022-05-14 Sat 14:55]                                 :Linux:
+CLOSED: [2022-05-14 Sat 15:02]
+:properties:
+:export_file_name: 1652565322.md
+:end:
+:LOGBOOK:
+- State "DONE"       from "NOW"        [2022-05-14 Sat 15:02]
+:END:
+We now return to our regularly scheduled programming. I reinstalled [[https://regolith-linux.org/][Regolith]]. Yes it's based on Ubuntu 20.04. In my case that's a plus, since some proprietary tools I rely on have not been updated for 22.04. I feel like I have what I need with [[https://brew.sh][Homebrew]] over Regolith.

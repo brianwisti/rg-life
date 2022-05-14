@@ -1,9 +1,10 @@
-<meta name="twitter:title" content="{{ .Title }}">
+<meta name="twitter:card" content="summary">
 {{ with .Site.Params.Author.Twitter -}}
   <meta name="twitter:site" content="@{{ . }}">
 {{- end }}
+<meta name="twitter:title" content="{{ .Title }}">
 {{ with .Description -}}
   <meta name="twitter:description" content="{{ . }}">
-{{ else }}
+{{- else -}}
   <meta name="twitter:description" content="{{ .Summary }}">
 {{- end }}

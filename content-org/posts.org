@@ -298,3 +298,14 @@ CLOSED: [2022-05-12 Thu 23:04]
 Promised I'd go to bed before 11pm. Oops. Okay but just getting this link to [[https://github.com/ananthakumaran/tide][Tide]] --- /TypeScript Interactive Development Environment/ for Emacs --- before I go brush my teeth.
 
 Also? I need to fiddle with my capture template logic for these notes, so it exports the subtree when I file from wherever.
+
+**** 2022-05-15 Sunday
+***** DONE [2022-05-15 Sun 22:06]                              :Workflow:
+CLOSED: [2022-05-15 Sun 22:08]
+:properties:
+:export_file_name: 1652677568.md
+:end:
+:LOGBOOK:
+- State "DONE"       from "NOW"        [2022-05-15 Sun 22:08]
+:END:
+Looking at all these notes I have in all these different tools. None of them fit quite right. And yeah. I know my problem is overthinking it. Doesn't mean I know how to stop.

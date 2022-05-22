@@ -333,3 +333,25 @@ CLOSED: [2022-05-15 Sun 22:08]
 - State "DONE"       from "NOW"        [2022-05-15 Sun 22:08]
 :END:
 Looking at all these notes I have in all these different tools. None of them fit quite right. And yeah. I know my problem is overthinking it. Doesn't mean I know how to stop.
+
+**** 2022-05-21 Saturday
+***** DONE [2022-05-21 Sat 17:44] My basic org-roam-dailies capture template :Emacs:
+CLOSED: [2022-05-21 Sat 17:51]
+:properties:
+:export_file_name: 1653180263.md
+:end:
+:LOGBOOK:
+- State "DONE"       from "NOW"        [2022-05-21 Sat 17:51]
+:END:
+
+Just a really mild adjustment to the [[https://www.orgroam.com/manual.html#org_002droam_002ddailies][org-roam-dailies]] "sane default configuration." Main difference is an inactive timestamp like I have for the tumblelog --- I like having a chronology --- and some file tags.
+
+#+begin_src elisp
+  (setq org-roam-dailies-capture-templates
+        '(("j" "Jot" entry "* %U %?"
+           :target (file+head "%<%Y-%m-%d>.org"
+                              "#+title: %<%Y-%m-%d>\n#+filetags: %<:%Y:%B>\n")
+           :unarrowed t)))
+#+end_src
+
+I may go past this with specific templates for tasks and bookmarks. But first I need to make sure this basic setup works for me.

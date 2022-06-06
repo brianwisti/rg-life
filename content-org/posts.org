@@ -355,3 +355,25 @@ Just a really mild adjustment to the [[https://www.orgroam.com/manual.html#org_0
 #+end_src
 
 I may go past this with specific templates for tasks and bookmarks. But first I need to make sure this basic setup works for me.
+
+*** 2022-06 June
+:properties:
+:export_hugo_section: posts/2022/06
+:end:
+
+**** 2022-06-06 Monday
+***** DONE [2022-06-06 Mon 09:12]                       :Workflow:Logseq:
+CLOSED: [2022-06-06 Mon 09:21]
+:properties:
+:export_file_name: 1654531935.md
+:end:
+:LOGBOOK:
+- State "DONE"       from "NOW"        [2022-06-06 Mon 09:21]
+:END:
+
+Trying to keep all my notes in one spot. Failing utterly. But hey I am coming up with some /fantastic/-looking workflows for each note application along the way.
+
+[[https://github.com/pengx17/logseq-plugin-link-preview][logseq-plugin-link-preview]] and the [[https://github.com/yoyurec/logseq-solarized-extended-theme][Solarized Extended]] theme pair up nicely on [[https://logseq.com][Logseq]].
+
+#+caption: Logseq screenshot describing my current setup
+[[file:/img/logseq-2022-06-06.png]]

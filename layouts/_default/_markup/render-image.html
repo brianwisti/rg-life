@@ -1,0 +1,22 @@
+{{- $image := .Page.Resources.GetMatch (printf "%s" .Destination) -}}
+{{- if $image -}}
+  {{- $resized := $image.Resize "1280x webp" -}}
+  {{- $alt := .PlainText | safeHTML -}}
+  {{- $caption := .PlainText | safeHTML -}}
+  {{- with .Title -}}
+    {{- $caption = . | safeHTML -}}
+  {{- end -}}
+  <figure {{- if (findRE "screenshot" $alt)  }} class="screenshot"{{- end -}}>
+    <a href="{{ $image.RelPermalink }}" target="_blank">
+    <img
+      src="{{ $resized.RelPermalink }}"
+      alt="{{ if $alt }}{{ $alt }}{{ else if $caption }}{{ $caption | markdownify | plainify }}{{ else }}&nbsp;{{ end }}"
+      >
+    </a>
+    {{- with $caption -}}
+        <figcaption>{{ . | markdownify }}</figcaption>
+    {{- end -}}
+  </figure>
+{{ else }}
+  {{ warnf "[%s] resource not found for [%s]" .Destination .Page.File.Path }}
+{{ end }}

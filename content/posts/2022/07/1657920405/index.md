@@ -13,12 +13,8 @@ cover: desktop.png
 This week the Linux partition is [EndeavourOS][endeavour-os] — specifically
 [Qtile Community Edition][qtile-edition].
 
-{{< figure
-  src="desktop.png"
-  caption="You have to add a few things to make tiling window manager screenshots interesting"
-  link="./desktop.png"
-  alt="qtile desktop with browser, terminal, and logseq"
->}}
+![qtile desktop with browser, terminal, and logseq](desktop.png
+  "You have to add a few things to make tiling window manager screenshots interesting.")
 
 So far, I like it.
 

@@ -10,8 +10,13 @@ unsafe = true
 [menus]
 main = [
   {Name = "RSS", URL = "/index.xml"},
+  {Name = "JSON", URL = "/index.json"},
   {Name = "Source Repo", URL = "https://github.com/brianwisti/rg-life"}
 ]
+
+[outputs]
+home = ["html", "rss", "json"]
+page = ["html"]
 
 [Params]
 Description = "Brian Wisti's Tumblelog"

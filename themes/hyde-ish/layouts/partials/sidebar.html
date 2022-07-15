@@ -13,7 +13,8 @@
         {{ range .Site.Menus.main -}}
           <li><a href="{{.URL}}"> {{ .Name }} </a></li>
         {{- end }}
-        <li>Links to Me</li>
+      </ul>
+      <ul class="sidebar-nav">
         {{- range .Site.Params.Me }}
           <li><a href="{{.URL}}" rel="me"> {{ .Name }} </a></li>
         {{- end }}
@@ -37,7 +38,6 @@
       </p>
       <p>
         Built with <a href="https://gohugo.io">Hugo</a>
-        and <a href="https://ox-hugo.scripter.co">ox-hugo</a>.
       </p>
     </footer>
   </div>

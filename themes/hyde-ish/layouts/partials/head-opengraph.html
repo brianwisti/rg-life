@@ -2,6 +2,26 @@
 <meta property="og:title" content="{{ .Title }}">
 {{ with .Description -}}
   <meta property="og:description" content="{{ . }}">
+  <meta name="twitter:description" content="{{ . }}">
 {{ else }}
   <meta property="og:description" content="{{ .Summary }}">
+  <meta name="twitter:description" content="{{ .Summary }}">
 {{- end }}
+
+{{ with .Site.Params.Author.Twitter -}}
+  <meta name="twitter:site" content="@{{ . }}">
+{{- end }}
+
+<meta name="twitter:title" content="{{ .Title }}">
+{{- $page := .Page -}}
+{{ with .Params.cover }}
+  {{- $image := $page.Resources.GetMatch . -}}
+  {{- with $image -}}
+    {{- $cardImage := .Fill "1200x630" -}}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="{{ $cardImage.Permalink }}">
+    <meta property="og:image" content="{{ $cardImage.Permalink }}">
+  {{- else -}}
+    <meta name="twitter:card" content="summary">
+  {{- end -}}
+{{ end }}

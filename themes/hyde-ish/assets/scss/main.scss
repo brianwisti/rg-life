@@ -73,6 +73,16 @@ footer {
   }
 }
 
+a {
+  &[href^="tel"]::before {
+    content: '☎️ ';
+  }
+
+  &[href^="sms"]::before {
+    content: '📱 ';
+  }
+}
+
 ul {
   &.pagination {
     list-style: none;

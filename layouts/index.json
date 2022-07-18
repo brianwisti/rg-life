@@ -15,7 +15,7 @@
     {{- end }}
     "description": {{ .Site.Title | jsonify }},
     "authors": [{
-        "name": {{ .Site.Author.name | jsonify }},
+        "name": {{ .Site.Params.Author.name | jsonify }},
         "url": "https://randomgeekery.org/static/img/avatar-thumbnail.jpg"
     }],
     "items": [

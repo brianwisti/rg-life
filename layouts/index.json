@@ -16,7 +16,7 @@
     "description": {{ .Site.Title | jsonify }},
     "authors": [{
         "name": {{ .Site.Author.name | jsonify }},
-        "url": "https://randomgeekery.org/static/img/avatar-thumbnail.jpg",
+        "url": "https://randomgeekery.org/static/img/avatar-thumbnail.jpg"
     }],
     "items": [
         {{ range $index, $element := $pages }}

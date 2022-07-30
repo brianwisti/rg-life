@@ -13,7 +13,7 @@ draft: false
 Used [CogDB][cogdb] to describe a folder hierarchy. Easier than figuring out
 how to annotate recursive structures for [Mypy][mypy].
 
-I got some wierd ideas of hard vs easy.
+I got some weird ideas of hard vs easy.
 
 ![unlabeled graph diagram](graph.png "No labels or code because it's work(ish)")
 

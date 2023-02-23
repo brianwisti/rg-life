@@ -21,3 +21,4 @@ Hopefully I can set up [Garage][garage] on my Raspberry Pi 4.
 
 [do-spaces]: https://www.digitalocean.com/products/spaces
 [siyuan]: https://b3log.org/siyuan
+[garage]: https://garagehq.deuxfleurs.fr

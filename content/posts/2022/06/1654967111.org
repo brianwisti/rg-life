@@ -1,0 +1,33 @@
+---
+title: "[2022-06-11 Sat 10:05]"
+author:
+- Brian Wisti
+date: 2022-06-11T10:05:12-07:00
+tags:
+- Workflow
+- Emacs
+draft: false
+---
+
+Got Org Babel playing nice with TypeScript thanks to [[https://github.com/lurdan/ob-typescript][ob-typescript]]. It's a wild Saturday morning here.
+
+#+caption: Takes a bit to get there on WSL but the code /does/ run.
+[[file:/img/2022-06-11-emacs-typescript.png]]
+
+<!--more-->
+
+That required a few more lines in my config, but not /too/ many.
+
+#+begin_src elisp
+(use-package ob-typescript)
+(use-package org
+  ;; ...
+  :config
+  (org-babel-do-load-languages
+    'org-babel-load-languages
+    '((typescript . t))))
+#+end_src
+
+I also followed my own [[{{< ref "posts/2022/05/1652421774.md" >}}][advice]] and added [[https://github.com/ananthakumaran/tide][Tide]] for TypeScript support in Emacs. Just copied and pasted from all the links, so config's a bit of a mess.
+
+Oh hey that's right I still need to take my ADHD meds. I'll go do that now.

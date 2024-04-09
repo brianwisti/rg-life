@@ -1,0 +1,44 @@
+---
+title: "[2022-06-09 Thu 23:20]"
+author:
+- Brian Wisti
+date: 2022-06-09T23:20:50-07:00
+tags:
+- Workflow
+- Obsidian
+draft: false
+---
+
+Meanwhile, in [[https://obsidian.md][Obsidian]]:
+
+#+caption: Using an Obsidian plugin to organize the mess I made in Obsidian.
+[[file:/img/2022-06-09-obsidian-types.png]]
+
+<!--more-->
+
+[[https://logseq.com][Logseq]] is great. Native outlining, org-like tasks, the power of [[http://www.learndatalogtoday.org][Datalog]]. But Obsidian has the [[https://blacksmithgu.github.io/obsidian-dataview/][Dataview]] plugin. What you feed it looks a lot like SQL.
+
+#+begin_src dataview
+TABLE
+  length(rows) as "Notes"
+from ""
+where isa != null
+GROUP BY isa
+SORT isa ASC
+#+end_src
+
+I kinda know SQL already. Enough to know what to look up to make a table of note types.
+
+| Group       | Notes |
+|-------------+-------|
+| Book        |     3 |
+| Game        |     5 |
+| Meeting     |     1 |
+| Movie       |     1 |
+| Package     |     1 |
+| Person      |    41 |
+| Pet         |     4 |
+| Project     |     1 |
+| Source Note |    16 |
+
+Nope. Haven't settled on One True Note System and I likely never will. But at least I'm enjoying myself.

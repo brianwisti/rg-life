@@ -1,0 +1,17 @@
+---
+title: "[2022-06-09 Thu 10:17]"
+author:
+- Brian Wisti
+date: 2022-06-09T10:17:01-07:00
+tags:
+- Python
+draft: false
+---
+
+Seeing some impressive numbers for the [[https://docs.python.org/3.11/whatsnew/3.11.html][Python 3.11]] beta on [[https://www.phoronix.com/scan.php?page=article&item=python-311-benchmarks&num=1][Phoronix]]:
+
+#+BEGIN_QUOTE
+When taking the geometric mean of all the Python benchmarks I carried out for this article on the AMD Ryzen 9 5950X, Python 3.11 Beta was about 41% faster overall than the current Python 3.10.4 stable release or 45% over the aging Python 3.8 series. All the individual benchmark data can be found via this [[https://openbenchmarking.org/result/2205310-PTS-PYTHON3127][OpenBenchmarking.org result page]].
+#+END_QUOTE
+
+via [[https://www.pythonweekly.com][Python Weekly]]

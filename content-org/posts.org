@@ -355,6 +355,93 @@ Just a really mild adjustment to the [[https://www.orgroam.com/manual.html#org_0
 #+end_src
 
 I may go past this with specific templates for tasks and bookmarks. But first I need to make sure this basic setup works for me.
+**** 2022-05-24 Tuesday
+***** DONE [2022-05-24 Tue 08:54]                     :Now:Workflow:Ruby:
+CLOSED: [2022-05-24 Tue 08:54]
+:properties:
+:export_file_name: 1653407690.md
+:end:
+Brain insists on a CLI flow for this tumblelog. So of course I have to mess up my perfectly functional flow.
+
+I know I'll fiddle with more later, but here's what I got at the moment.
+
+I consider the Org inactive timestamps title core to the tumblelog flow. Better let [[https://gohugo.io/functions/time/format/][=time.Format=]] produce something plausible in my =posts.md= Hugo archetype.
+
+#+begin_src markdown
+  ---
+  title: "[{{ time.Format "2006-01-02 Mon 15:04" .Date }}]"
+  author:
+  - Brian Wisti
+  date: {{ .Date }}
+  tags: []
+  draft: false
+  ---
+#+end_src
+
+The archetype uses YAML frontmatter instead of [[https://ox-hugo.scripter.co][ox-hugo]]'s default TOML. I find manually managing the tags is easier that way.
+
+My brain picked Ruby for the script to generate and open a new post, thanks mainly to the convenience of Piotr Murach's [[https://ttytoolkit.org][TTY Toolkit]].
+
+#+begin_src ruby
+  #!/usr/bin/env ruby
+
+  require "tty-command"
+  require "tty-editor"
+
+  POST_PATH = "content/posts/%Y/%m/%s.md"
+
+  post_path = Time.now.strftime POST_PATH
+  cmd = TTY::Command.new
+  cmd.run "hugo new #{post_path}"
+
+  TTY::Editor.open post_path
+#+end_src
+
+All it does is ask Hugo to create a new post based on the archetype, and then open that post file in my `$EDITOR`.
+
+I'll get to more later. I know from past experience I can use `tty-command` to manage the git bits after I'm done writing.
+
+But apparently if I want to pay rent I need to *work*.
+**** 2022-05-25 Wednesday
+***** DONE [2022-05-25 Wed 09:54]                         :Tools:Windows:
+CLOSED: [2022-05-25 Wed 09:54]
+:properties:
+:export_file_name: 1653497659.md
+:end:
+
+New [[https://devblogs.microsoft.com/commandline/windows-terminal-preview-1-14-release/][Windows Terminal Preview release]] dropped. I spend enough time working in Windows that I pay attention to this stuff.
+
+I'm fussy about my terminal experiene, so I use [[https://apps.microsoft.com/detail/9n8g5rfz9xk3][Windows Terminal Preview]] when getting work done on Windows. It's a few steps ahead of the main release, which currently means fewer — not /none/ but fewer — wierd little display bugs in Neovim and tmux.
+
+#+begin_quote
+It's Microsoft Build! We have a Windows Terminal Preview release for you focused on fixing bugs and improving quality.
+#+end_quote
+
+You'll probably mostly see screenshots of the multi-pane single-image background, but I don't mess with image backgrounds in my terminal. Too distracting for my brain.
+
+This bit about GUI apps interests me though. It might smooth things out when I'm running X11 Emacs from WSL2.
+
+#+begin_quote
+Using windowed applications from the terminal should work much better now:
+
+- ConPTY can now handle show/hide window calls.
+- Windows created by console applications now appear above the terminal.
+- Focus events are now sent through VT input.
+#+end_quote
+
+Oh hey what's this?
+
+#+begin_quote
+The terminal should no longer crash when deleting the last profile in the settings UI.
+#+end_quote
+
+Bumped into this bug the other day, while cleaning out some neglected distro installations.
+**** 2022-05-40 Monday
+***** [2022-05-30 Mon 13:45]                          :Workflow:Obsidian:
+:properties:
+:export_file_name: 1653939606.md
+:end:
+Having a fun day fiddling with the [[https://silentvoid13.github.io/Templater/][Templater]] plugin for [[https://obsidian.md][Obsidian]].
 
 *** 2022-06 June
 :properties:

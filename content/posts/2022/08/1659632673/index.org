@@ -11,11 +11,11 @@ draft: false
 cover: 2022-08-04-logseq-icons.png
 ---
 
-I tried visually replacing a few [Logseq][logseq] tags with icons in CSS. It worked!
+I tried visually replacing a few [[https://logseq.com][Logseq]] tags with icons in CSS. It worked!
 
-![logseq page ](2022-08-04-logseq-icons.png "Three down, a few thousand to go")
-
-[logseq]: https://logseq.com
+#+caption: Three down, a few thousand to go
+#+attr_html :alt logseq page
+[[file:/img/2022-08-04-logseq-icons.png]]
 
 <!--more-->
 
@@ -25,9 +25,9 @@ business.
 
 - #idea Thinking about custom tag icons for logseq
 	- #warning under construction #warning
-	- Inspired by Obsidian [Alternate Checkboxes](https://publish.obsidian.md/hub/02+-+Community+Expansions/02.05+All+Community+Expansions/CSS+Snippets/Alternate+Checkboxes+(SlRvb)) CSS snippet
-	- Here's what `#idea` looks like in the dev console:
-		- ``` html
+	- Inspired by Obsidian [[https://publish.obsidian.md/hub/02+-+Community+Expansions/02.05+All+Community+Expansions/CSS+Snippets/Alternate+Checkboxes+(SlRvb)][Alternate Checkboxes]] CSS snippet
+	- Here's what =#idea= looks like in the dev console:
+		- #+begin_src html
 		  <div
 		       class=""
 		       style="display: inline;"
@@ -37,23 +37,23 @@ business.
 		       ><a
 		           data-ref="idea"
 		           class="tag">#idea</a></div>
-		  ```
+		  #+end_src
 	- #question how do my installed plugins change the structure?
 		- I don't think I currently have any plugins that alter element attributes
-	- Set up [CSS Selector](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors) #bookmark to match
-		- `a.tag[data-ref="idea"]`
+	- Set up [[https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors][CSS Selector]] #bookmark to match
+		- =a.tag[data-ref="idea"]=
 	- Hide the displayed tag by making it tiny
-		- ``` css
+		- #+begin_src css
 		  a.tag[data-ref="idea"] {
 		    border: none;
 		    font-size: 0;
 		  }
-		  ```
+		  #+end_src
 	- Append an icon with the font size we started at
-		- ``` css
+		- #+begin_src css
 		  a.tag[data-ref="idea"]:after {
 		    content: "💡";
 		    font-size: initial;
 		  }
-		  ```
-	- as-is, this has accessibility issues and `font-size: initial` won't work with headings. Also, to do it right I should be encoding the icon
+		  #+end_src
+	- as-is, this has accessibility issues and =font-size: initial= won't work with headings. Also, to do it right I should be encoding the icon

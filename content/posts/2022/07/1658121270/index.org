@@ -1,0 +1,22 @@
+---
+title: "[2022-07-17 Sun 22:14]"
+author:
+- Brian Wisti
+date: 2022-07-17T22:14:30-07:00
+tags:
+- Work
+- Gaming
+- TOEM
+- Actually
+cover: engineer-noises.jpg
+summary: My response when people ask me what I do for a living
+draft: false
+---
+
+#+caption: My response when people ask me what I do for a living
+#+ATTR_HTML: :alt TOEM game showing figure in hard hat with speech bubble that reads '*ENGINEER NOISES*'
+[[file:/img/engineer-noises.jpg]]
+
+<!--more-->
+
+Spent some time playing [[https://www.somethingwemade.se/toem/][TOEM]] this evening. Very relaxing. Met an artist later in the game. Did not like him.

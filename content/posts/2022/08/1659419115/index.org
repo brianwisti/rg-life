@@ -1,0 +1,21 @@
+---
+title: "[2022-08-01 Mon 22:45]"
+author:
+- Brian Wisti
+date: 2022-08-01T22:45:16-07:00
+tags:
+- Workflow
+- OrgRoam
+draft: false
+cover: 2022-08-01-org.png
+---
+
+Continuing to get annoyed at Datalog for [[https://docs.logseq.com/#/page/advanced%20queries][queries]] in Logseq, when I remembered [[https://www.orgroam.com][org-roam]] uses a SQLite database. Plus there's [[https://github.com/org-roam/org-roam-ui][org-roam-ui]], which — sheesh. It's impressive.
+
+#+caption: The graph is real pretty.
+#+attr_html: :alt "org-roam-ui 3d graph next to emacs window with documents and a SQL query"
+[[file:/img/2022-08-01-org.png]]
+
+<!--more-->
+
+I have way too much sitting in my Logseq graph to just bounce, but it's good to remember I have options.

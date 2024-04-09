@@ -1,0 +1,20 @@
+---
+title: "[2022-07-20 Wed 22:14]"
+author:
+- Brian Wisti
+date: 2022-07-20T22:14:36-07:00
+tags:
+- Logseq
+- Workflow
+cover: logseq-banners.png
+draft: false
+---
+Did the useful [[https://logseq.com][Logseq]] puttering. Now some decorative fun with the [[https://github.com/yoyurec/logseq-banners-plugin][Logseq Banners]] plugin.
+
+<!--more-->
+
+#+caption: It's all pretty!
+#+attr_html: :alt Logseq page with a banner image and page icon
+[[file:/img/logseq-banners.png]]
+
+Banner image by [[https://unsplash.com/@eilisgarvey?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText][Eilis Garvey]] on [[https://unsplash.com/s/photos/root?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText][Unsplash]]

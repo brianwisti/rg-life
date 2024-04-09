@@ -10,24 +10,20 @@ cover: graph.png
 draft: false
 ---
 
-Used [CogDB][cogdb] to describe a folder hierarchy. Easier than figuring out
-how to annotate recursive structures for [Mypy][mypy].
+Used [[https://cogdb.io][CogDB]] to describe a folder hierarchy. Easier than figuring out
+how to annotate recursive structures for [[http://mypy-lang.org][Mypy]].
 
 I got some weird ideas of hard vs easy.
 
-![unlabeled graph diagram](graph.png "No labels or code because it's work(ish)")
-
-[cogdb]: https://cogdb.io
-[mypy]: http://mypy-lang.org
+#+caption: No labels or code because it's work(ish)
+#+attr_html: :alt unlabelled graph diagram
+[[file:/img/graph.png]]
 
 <!--more-->
 
-Okay *fine*. Here's a cleaned-up version of the code looking at my [main
-blog][rgb] Markdown sources.
+Okay /fine/. Here's a cleaned-up version of the code looking at my [[https://randomgeekery.org][main blog]] Markdown sources.
 
-[rgb]: https://randomgeekery.org
-
-```python
+#+begin_src python
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Dict, Set
@@ -80,15 +76,14 @@ if __name__ == "__main__":
     folder = Folder(root, "**/*.md")
     url = folder.graph.v().tag("from").out("parent").tag("to").view("parent").url
     print(url)
-```
+#+end_src
 
-![unlabeled graph diagram with many vertices](rgb-hugo.png "That image took a lot longer to render")
+#+caption: That image took a lot longer to render
+#+attr_html: :alt unlabeled graph diagram with many vertices
+[[file:/img/rgb-hugo.png]]
 
-Aside from the pretty picture, the nested structure that is now a graph helps
-me pull some files into [Logseq][logseq] for better notes.
+Aside from the pretty picture, the nested structure that is now a graph helps me pull some files into [[https://logseq.com][Logseq]] for better notes.
 
 ooh i could pull my site into logseq
 
 Go to bed, Brian.
-
-[logseq]: https://logseq.com

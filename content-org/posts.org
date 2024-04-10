@@ -7,6 +7,8 @@
 #+hugo_base_dir: ../
 #+startup: logdone
 
+#+macro: youtube @@hugo:{{< youtube id="$1" >}}@@
+
 * Posts
 :properties:
 :hugo_section: posts
@@ -401,7 +403,7 @@ All it does is ask Hugo to create a new post based on the archetype, and then op
 
 I'll get to more later. I know from past experience I can use `tty-command` to manage the git bits after I'm done writing.
 
-But apparently if I want to pay rent I need to *work*.
+But apparently if I want to pay rent I need to /work/.
 **** 2022-05-25 Wednesday
 ***** DONE [2022-05-25 Wed 09:54]                         :Tools:Windows:
 CLOSED: [2022-05-25 Wed 09:54]
@@ -436,13 +438,92 @@ The terminal should no longer crash when deleting the last profile in the settin
 #+end_quote
 
 Bumped into this bug the other day, while cleaning out some neglected distro installations.
-**** 2022-05-40 Monday
-***** [2022-05-30 Mon 13:45]                          :Workflow:Obsidian:
+**** 2022-05-30 Monday
+***** DONE [2022-05-30 Mon 13:45]                     :Workflow:Obsidian:
+CLOSED: [2022-05-30 Mon 13:45]
 :properties:
 :export_file_name: 1653939606.md
 :end:
 Having a fun day fiddling with the [[https://silentvoid13.github.io/Templater/][Templater]] plugin for [[https://obsidian.md][Obsidian]].
 
+#+caption: Screenshot of journal page showing attempts at automating link creation
+[[file:/img/2022-05-30-obsidian.png]]
+
+Here's the template code I have at the moment, if that's the sort of thing that interests you. Borrowed heavily from [[https://www.thoughtasylum.com/2022/03/29/auto-link-and-generate-page-in-obsidian/][ThoughtAsylum]] and [[https://www.redgregory.com/obsidian-content/2021/11/17/15-templater-commands-for-obsidian][Red Gregory]].
+
+This is the template I invoke to create a new jot file. It prompts me for an optional topic, creates the file, and inserts a link wherever my cursor is.
+
+With syntax highlighting, since inside the ~<%* ... %>~ it's just JavaScript.
+
+#+caption: jot-insert.md
+#+BEGIN_SRC javascript
+<%*
+// Jot title is a Zettel timestamp and optional topic
+const timestamp = tp.date.now("YYYYMMDDhhmm");
+let title = timestamp;
+
+const jotSubject = await tp.system.prompt("What's this jot about?");
+
+if (jotSubject) {
+	title = `${title} ${jotSubject}`;
+}
+
+// Where I keep my quick jots
+const targetPath = "jots";
+
+// The template used to generate the new jot
+const templateName = "_templates/jot-new";
+
+// Create the folder object
+let folder = app.vault.getAbstractFileByPath(targetPath);
+// Get the template file content
+let templateFile = await tp.file.find_tfile(templateName);
+let rawContent = await app.vault.read(templateFile);
+
+// Create the new file in the folder from the template (do not open it by default)
+await tp.file.create_new(rawContent, title, false, folder);
+
+// Insert a link at the current cursor position to the new file
+const link = `[[${title}]]`;
+tR += link;
+%>
+#+end_src
+
+This template sets the content of the new file. If I provided something for a topic when invoking `jot-insert.md`, that will be used as the display title.
+
+Without syntax highlighting. Markdown, YAML, and JavaScript all mixed in --- can Hugo / Chroma even do that?
+
+#+caption: jot-new.md
+#+BEGIN_SRC text
+---
+<%*
+const fileTitle = tp.file.title;
+let pageTitle = fileTitle;
+
+if (fileTitle.length > 12) {
+	pageTitle = fileTitle.slice(13);
+}
+-%>
+title: <% pageTitle %>
+created_at: <% tp.file.creation_date() %>
+tags:
+- jot
+---
+
+up:: <% `[[${tp.file.creation_date('gggg-MM-DD')}]]` %>
+
+# <% pageTitle %>
+
+<% tp.file.cursor() %>
+#+end_src
+
+Got the =up::= link there for the [[https://skepticmystic.github.io/breadcrumbs/][Breadcrumbs]]. That way the jot links back to whatever day I made the jot, even if it's a jot for some unrelated topic. "When?" is as important of a question as "what?" when I'm trying to track my thoughts.
+
+Looks a bit like [[https://zettelkasten.de][Zettelkasten]], but the only thing intentionally Zettel about it is the timestamp.
+
+Been focusing on the less outliner-oriented note systems to simplify copy and paste to / from the outside world. But that means a single page can get unwieldy if I'm not careful. Now I can link out for stuff like meeting notes and whatever to keep my daily notes from become 10,000 word walls of text.
+
+Oh and I know I can export from Org Mode to whatever I need for pasting. I may get there. This is an incremental process. Right now I'm dealing with the fact that most of my notes are in one flavor of Markdown or another.
 *** 2022-06 June
 :properties:
 :export_hugo_section: posts/2022/06
@@ -464,3 +545,140 @@ Trying to keep all my notes in one spot. Failing utterly. But hey I am coming up
 
 #+caption: Logseq screenshot describing my current setup
 [[file:/img/logseq-2022-06-06.png]]
+**** 2022-06-07 Tuesday
+***** DONE [2022-06-07 Tue 09:10]                              :Workflow:
+CLOSED: [2022-07-07 Tue 09:10]
+:properties:
+:export_file_name: 1654618234.md
+:end:
+Oh hey the new issue of the [[https://www.amplenote.com/blog/ample_sampler_issue_2][Amplenote Sampler]] newsletter includes some suggestions for handling projects in my big giant mess of notes --- sorry, I meant "finely-tuned knowledge management workflow."
+
+#+BEGIN_QUOTE
+Today's issue is packed full of Amplenote Tips on creating and keeping track of Projects and exploiting Daily Jots to their full potential.
+#+END_QUOTE
+
+Why am I getting this newsletter? [[https://amplenote.com][Amplenote]] is a good note / task system. Free tier is useful. First paid tier is inexpensive. I like the mobile app. Works great for quickly capturing thoughts, which I pull into my primary as needed. Turns out the newsletter is also good, both for Amplenote tips and general ideas.
+
+Right! The newsletter! I feel like summarizing, so I'm gonna summarize.
+
+****** Project Note Organization
+
+Each project gets its own note. Link back to that in supplemental notes rather than cluttering up your tags with =#my-project=. Big projects could have a main note that holds the task list and links out to supplemental notes, [[https://medium.com/@nickmilo22/in-what-ways-can-we-form-useful-relationships-between-notes-9b9ec46973c6][MOC]]-style.
+
+Use tags for broader classifications. Maybe that main project note gets tagged =#project=. When it's done, it gets an =#archived= tag.
+
+****** Logging Project Activity
+
+There's a few options.
+
+- log project activity in the project, linking back to your daily jot / journal for that day
+- log activity in the daily jots, linking to the project page
+- log a day's activity for a project in its own note, generated for the day on-request and specially tagged: =#project/field-trial= or =#project/dev=
+
+****** What about me
+
+I already give each project its own note, but I tend to give them overly specific tags. Something I'm already thinking about, and that newsletter made me think more. Will probably refactor my tags.
+
+Logging? Right now I log my project activity in the daily journal. But for big projects that makes my project note's backlinks a bit of a mess. To cut down on the amount of clicking and scanning, I pull tidbits that seem interesting back into the project note. Sort of like a topic note, improving and refining as I get more information.
+
+Something I'm starting to realize: a project note is not a topic note. Once I finish a project, it's part of the historical record rather than a still-evolving resource.
+
+On first read, logging activity to the project sounds better. I can see all the activity for a project by scrolling. It would get cluttered, but I lean hard on collapsible outline views --- [[https://logseq.com][Logseq]] is my primary note system today.
+
+But for note systems that don't offer infinitely nested lists maybe not? Even for the ones that do, it could clarify backlinks. My dev projects could have `#project/planning` and `#project/dev` notes to show the nature of the day's work. Those notes could also act as clarifying intermediate links between the project I worked on and the day I did the work.
+
+Something to think about anyways.
+
+Um. I just meant to share the link. Anyways back to work.
+**** 2022-06-08 Wednesday
+***** DONE [2022-06-08 Wed 10:03]                                :Logseq:
+CLOSED: [2022-06-08 Wed 10:03]
+:properties:
+:export_file_name: 1654707807.md
+:end:
+
+Started playing with local =custom.css= to tweak the [[https://github.com/sokirill/logseq-panic-theme][Panic]] theme for [[https://logseq.com][Logseq]].
+
+#+caption: Some of those jots go back to Logseq 0.1.x, so don't trust them.
+[[file:/img/logseq-custom-panic-2022-06-08.png]]
+
+<!--more-->
+
+I changed the default text font to [[https://opendyslexic.org][OpenDyslexic]] and code to the [[https://www.nerdfonts.com][Nerd Fonts]] version of [[https://github.com/belluzj/fantasque-sans][Fantasque Sans Mono]]. No I'm not dyslexic --- at least I'm pretty sure I'm not --- but I find these friendlier and easier to read than the more severe fonts in common use. I usually install them locally on whatever device I use for ready access.
+
+#+BEGIN_SRC css
+:root {
+  --ls-font-family: "OpenDyslexic";
+  --ls-page-text-size: 18px;
+}
+
+.extensions__code .CodeMirror {
+  font-family: "FantasqueSansMono NF", monospace;
+}
+
+.content :not(pre) > code {
+    font-family: "FantasqueSansMono NF", monospace;
+}
+#+END_SRC
+
+Now I want to go all in and make a proper theme.
+***** DONE [2022-06-08 Wed 22:35]                                 :Games:
+CLOSED: [2022-06-08 Wed 22:35]
+:properties:
+:export_file_name: 1654752933.md
+:end:
+Having put about 150 hours combined into American / European [[https://worldoftrucks.com/en/profile/6779015][Truck Simulator]] --- for me, a very long time paying attention to the same topic --- this review by [[https://www.escapistmagazine.com/category/zero-punctuation/][Yahtzee]] describing [[https://www.focus-entmt.com/en/games/hardspace-shipbreaker][Hardspace: Shipbreaker]] as a "Dad game" makes it sound possibly relevant to my interests.
+
+{{{youtube(tWW0tVjeV20)}}}
+**** 2022-06-09 Thursday
+***** DONE [2022-06-09 Thu 10:17]                                :Python:
+CLOSED: [2022-06-09 Thu 10:17]
+:properties:
+:export_file_name: 1654795021.md
+:end:
+Seeing some impressive numbers for the [[https://docs.python.org/3.11/whatsnew/3.11.html][Python 3.11]] beta on [[https://www.phoronix.com/scan.php?page=article&item=python-311-benchmarks&num=1][Phoronix]]:
+
+#+BEGIN_QUOTE
+When taking the geometric mean of all the Python benchmarks I carried out for this article on the AMD Ryzen 9 5950X, Python 3.11 Beta was about 41% faster overall than the current Python 3.10.4 stable release or 45% over the aging Python 3.8 series. All the individual benchmark data can be found via this [[https://openbenchmarking.org/result/2205310-PTS-PYTHON3127][OpenBenchmarking.org result page]].
+#+END_QUOTE
+
+via [[https://www.pythonweekly.com][Python Weekly]]
+***** DONE [2022-06-09 Thu 23:20]                     :Workflow:Obsidian:
+CLOSED: [2022-06-09 Thu 23:20]
+:properties:
+:export_file_name: 1654842049.md
+:end:
+Meanwhile, in [[https://obsidian.md][Obsidian]]:
+
+#+caption: Using an Obsidian plugin to organize the mess I made in Obsidian.
+[[file:/img/2022-06-09-obsidian-types.png]]
+
+<!--more-->
+
+[[https://logseq.com][Logseq]] is great. Native outlining, org-like tasks, the power of [[http://www.learndatalogtoday.org][Datalog]]. But Obsidian has the [[https://blacksmithgu.github.io/obsidian-dataview/][Dataview]] plugin. What you feed it looks a lot like SQL.
+
+#+begin_src dataview
+TABLE
+  length(rows) as "Notes"
+from ""
+where isa != null
+GROUP BY isa
+SORT isa ASC
+#+end_src
+
+I kinda know SQL already. Enough to know what to look up to make a table of note types.
+
+| Group       | Notes |
+|-------------+-------|
+| Book        |     3 |
+| Game        |     5 |
+| Meeting     |     1 |
+| Movie       |     1 |
+| Package     |     1 |
+| Person      |    41 |
+| Pet         |     4 |
+| Project     |     1 |
+| Source Note |    16 |
+
+Nope. Haven't settled on One True Note System and I likely never will. But at least I'm enjoying myself.
+
